@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Righteous&display=swap");
+/*For fonts*/
+
+/*The background of body is like rainbow colors because the product is also colorful 
+Also specified the brightness ofr the body and removes the margin*/
+body {
+  background: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  filter: brightness(150%);
+  margin: 0; /* Remove default margin */
+}
+/*The header which is a nav bar if of black color so that it will look separate*/
+header {
+  background-color: black;
+  padding: 10px 0;
+}
+/*The padding font size and style is specified for all anchor tags used.*/
+header a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 14px 16px;
+
+  font-size: 20px;
+  margin-right: 10px;
+}
+/*The text in the header tag*/
+header a.text {
+  font-family: "Orbitron", sans-serif; /*Font family for the heading*/
+  letter-spacing: 0.4rem; /*Letter spacing so that it will not look congested*/
+  /*So that font will look like a rainbow*/
+  background-image: linear-gradient(
+    to left,
+    #ff5757,
+    #fff100,
+    #15ffe1,
+    #ff0040
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: 7vmin; /* Adjust font size for smaller screens */
+  touch-action: manipulation;
+  font-style: normal;
+  font-weight: 900;
+}
+
+/*The menus in header tag
+everything is specified like font style font size and color*/
+header a.menu {
+  font-family: "Righteous", sans-serif;
+  font-style: italic;
+  float: right;
+  letter-spacing: 0.2rem;
+  color: rgb(7, 252, 7);
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+/*Hover effects for menu looks great*/
+header a.menu:hover,
+header a.menu:focus {
+  background-image: linear-gradient(90deg, #ff00d2, #fed90f);
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 16);
+  color: rgb(237, 240, 240);
+  transition: 0.2s;
+  font-variant: small-caps;
+}
+/*Heart icon in the center of nav bar next to text looks cute*/
+header a.heart {
+  margin-left: 5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: red;
+  font-size: 6vmin; /* Adjust font size for smaller screens */
+  position: relative;
+  display: inline; /* Ensure the container only takes the width of the heart */
+  touch-action: manipulation;
+}
+/*Hover effect for heart icon*/
+header a.heart:hover {
+  text-shadow: 0 0 10px red;
+}
+/*For responsiveness whn displayed in smaller screens
+everything is responsive in any browser and in any media*/
+@media screen and (max-width: 600px) {
+  header a {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  header a.text,
+  header a.menu {
+    float: none;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  header a.heart {
+    font-size: 10vw;
+    float: none;
+    text-align: center;
+    width: 90%;
+    box-sizing: border-box;
+    margin-bottom: 100%;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  iframe {
+    width: 300px; /* Set a fixed width for the video on larger screens */
+    height: 315px;
+  }
+}
+/*End of media*/
+/*For image and info*/
+div.content-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px; /* Adjusted padding to prevent overlap with footer */
+}
+/*For main image 
+border brightness animation width is specified*/
+div img.main-image {
+  width: 60%;
+  height: auto;
+  border: aqua solid;
+  margin-top: 2%;
+  filter: brightness(60%);
+  transition: transform 0.5s ease;
+  position: relative;
+  display: inline;
+  touch-action: manipulation;
+  object-fit: cover;
+  height: auto;
+}
+/*Hover effects for image*/
+div img.main-image:hover,
+div img.main-image:focus,
+div img.main-image.touch-hover {
+  transform: scale(1);
+  box-shadow: 0px 0px 20px 20px rgba(17, 17, 17, 0.7);
+  cursor: grab;
+  border: black dotted thick;
+  filter: brightness(70%);
+}
+/*Paragraph which gives info for product*/
+p.sum {
+  padding: 50px 20px; /*Padding for words*/
+  box-shadow: 0px 0px 20px 20px rgba(6, 6, 6, 0.7); /*Box shadow for enhancement*/
+  animation: borderAnimation 1s infinite; /*Animation around the paragraph*/
+  border-radius: 20px; /*Border radius to determine corners*/
+  /*Margins for left and right */
+  margin-left: 2%;
+  margin-right: 2%;
+  /*Font size style family and color*/
+  font-size: medium;
+  font-family: "Righteous", sans-serif;
+  text-shadow: 0 0 10px yellow;
+  color: yellow;
+  background-color: black;
+}
+/*Animation for the borders of paragraph*/
+@keyframes borderAnimation {
+  0% {
+    border: 5px solid #ff00ff;
+    transform: translate(0, 0);
+  }
+
+  25% {
+    border: 5px solid #00ff00;
+    transform: translate(0, 0);
+  }
+
+  50% {
+    border: 5px solid #ccff00;
+    transform: translate(0, 0);
+  }
+
+  75% {
+    border: 5px solid #00ffe1;
+    transform: translate(0, -0);
+  }
+
+  100% {
+    border: 5px solid #ff2600;
+    transform: translate(0, 0);
+  }
+}
+/*For footer
+color position 
+everything is specified*/
+footer {
+  background-color: black;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  z-index: 1; /* Ensure the footer is above other elements */
+}
+/*Copyright line in footer*/
+footer p {
+  margin: 0;
+}
+/*For container for icons*/
+.icons {
+  display: flex; /* Convert container to flexbox */
+  flex-direction: row; /* Arrange icons horizontally */
+  justify-content: center; /* Center icons horizontally */
+  flex-wrap: wrap; /* Wrap icons to next row */
+}
+
+.icons img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  margin: 5px; /* Adjust the margin as needed for spacing between icons */
+  background-color: white;
+  border-radius: 40px;
+}
+
+.facebook:hover {
+  background-color: blue;
+}
+
+.instagram:hover {
+  background-color: #ff1515;
+}
+
+.linkedin:hover {
+  background-color: #155bff;
+}
+
+.messenger:hover {
+  background-color: #1596ff;
+}
+.pinterest:hover {
+  background-color: #ff1515;
+}
+.whatsapp:hover {
+  background-color: #15ff1d;
+}

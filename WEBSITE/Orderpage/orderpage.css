@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/* wrapper as flex container */
+.wrapper {
+  display: flex; /* display as flex container */
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  height: 200vh; /* 200 viewport heights */
+  width: 100%; /* 100% width */
+  background: url("/WEBSITE/media/bg.jpg") no-repeat; /* background image with no repeat */
+  background-size: cover; /* cover entire area with image */
+  background-position: center; /* position at center */
+  animation: animateBg 5s linear infinite; /* infinite animation with duration 5s */
+}
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.login-box {
+  /* Set relative positioning */
+  position: relative;
+  /* Set box dimensions */
+  width: 500px;
+  height: 1000px;
+  /* Set transparent background */
+  background: transparent;
+  /* Set border radius and color */
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  /* Align content within box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add background blur effect */
+  backdrop-filter: blur(15px);
+}
+h2 {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+.input-box {
+  /* relative position for child element */
+  position: relative;
+
+  /* fixed width */
+  width: 310px;
+
+  /* vertical margin */
+  margin: 30px 0;
+
+  /* bottom border */
+  border-bottom: 1px solid #fff;
+}
+.input-box label {
+  /* position absolute for floating label */
+  position: absolute;
+  /* vertical alignment of label */
+  top: 50%;
+  /* horizontal positioning */
+  left: 5px;
+  /* center vertically */
+  transform: translateY(-50%);
+  /* label text size */
+  font-size: 1em;
+  /* label text color */
+  color: #fff;
+  /* make label non-clickable */
+  pointer-events: none;
+  /* smooth transition effect */
+  transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+/* Define input box */
+.input-box input {
+  /* Full width of parent */
+  width: 100%;
+  /* Fixed height */
+  height: 50px;
+  /* Transparent background */
+  background: transparent;
+  /* Remove borders */
+  border: none;
+  /* Remove outline */
+  outline: none;
+  /* Standard font size */
+  font-size: 1em;
+  /* White text color */
+  color: #fff;
+  /* Add padding for left side */
+  padding: 0 35px 0 5px;
+}
+.input-box .icon {
+  /* position icon absolute */
+  position: absolute;
+  /* place icon at the right of the input */
+  right: 8px;
+  /* center icon vertically */
+  top: 50%;
+  /* change icon color to white */
+  color: #fff;
+  /* fix vertical centering due to different icon sizes */
+  transform: translateY(-50%);
+}
+
+/* Style button */
+button {
+  /* Full width */
+  width: 100%;
+  /* Fixed height */
+  height: 40px;
+  /* White background */
+  background-color: #fff;
+  /* No border */
+  border: none;
+  /* Rounded corners */
+  border-radius: 40px;
+  /* Pointer cursor */
+  cursor: pointer;
+  /* Regular font size */
+  font-size: 1em;
+  /* Black text color */
+  color: #000;
+  /* Medium font weight */
+  font-weight: 500;
+}
+/*For responsiveness*/
+@media (max-width: 500px) {
+  .login-box {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  .input-box {
+    width: 290px;
+  }
+}

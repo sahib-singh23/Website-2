@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+/*for grid container
+items placed in the center
+font family is specified 
+and BG color also.*/
+body {
+  display: grid;
+  place-items: center;
+  font-family: "Righteous", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  background-color: #212121;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+.main {
+  max-width: 75rem;
+  padding: 3em 1.5em;
+}
+/*Main heading
+color font style font family fon t size and text shadow for glowing effect
+are specified*/
+.main__heading {
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-bottom: 0.75em;
+  text-align: center;
+  color: #f43303;
+  font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 10px #f43303, 0 0 20px #f43303;
+}
+
+.cards {
+  position: relative;
+}
+
+.cards__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5em;
+}
+
+/* Define card structure */
+.card {
+  /* Spacing for card items */
+  --flow-space: 0.5em;
+
+  /* HSL color value */
+  --hsl: var(--hue), var(--saturation), var(--lightness);
+
+  /* Card background color */
+  background-color: #2b2b2b;
+
+  /* Grid layout */
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+
+  /* Card dimensions */
+  flex: 1 1 14rem;
+
+  /* Card padding */
+  padding: 1.5em 2em;
+
+  /* Card alignment */
+  align-items: start;
+
+  /* Gap between card items */
+  gap: 1.25em;
+
+  /* Card text color */
+  color: #eceff1;
+
+  /* Card border */
+  border: 1px solid #eceff133;
+
+  /* Card border radius */
+  border-radius: 15px;
+}
+
+.card__bullets {
+  line-height: 1.4;
+}
+
+/* Display as inline-block */
+.card__bullets li::before {
+  display: inline-block;
+  /* Adjust vertical position */
+  transform: translateY(0.25ch);
+  /* Add space to the right */
+  margin-right: 1ch;
+}
+
+.card__heading {
+  /* Font size: 2em, weight: 600 */
+  font-size: 2em;
+  font-weight: 600;
+
+  /* Color: #12dfee, family: Orbitron */
+  color: #12dfee;
+  font-family: "Orbitron", sans-serif;
+}
+
+.card__price {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1.25em);
+}
+
+.cta {
+  /* display block element */
+  display: block;
+
+  /* remove text underline */
+  text-decoration: none;
+
+  /* text color white */
+  color: #fff;
+
+  /* background color dark gray */
+  background-color: #0d0d0d;
+
+  /* align bottom */
+  align-self: end;
+
+  /* margin 1em 0 0.5em 0 */
+  margin: 1em 0 0.5em 0;
+
+  /* center text */
+  text-align: center;
+
+  /* padding 0.7em */
+  padding: 0.7em;
+
+  /* border radius 10px */
+  border-radius: 10px;
+
+  /* font size 1rem */
+  font-size: 1rem;
+
+  /* font weight 600 */
+  font-weight: 600;
+}
+
+.card:nth-child(1) {
+  /* 1st card: 165, 82.26%, 51.37% */
+  --hue: 165;
+  --saturation: 82.26%;
+  --lightness: 51.37%;
+}
+
+.card:nth-child(2) {
+  --hue: 291.34;
+  --saturation: 95.9%;
+  --lightness: 61.76%;
+}
+
+.card:nth-child(3) {
+  --hue: 338.69;
+  --saturation: 100%;
+  --lightness: 48.04%;
+}
+
+/* Overlay class with hover effect */
+.overlay {
+  position: absolute; /* Absolute positioning */
+  inset: 0; /* Setting the position to 0 */
+  pointer-events: none; /* Ignore pointer events */
+  user-select: none; /* Disable user selection */
+  opacity: var(--opacity, 0); /* Set the initial opacity */
+  mask: radial-gradient(
+    /* Use a radial gradient for the mask */ 25rem 25rem at var(--x) var(--y),
+    /* Set the radial gradient size and position */ #000 1%,
+    /* Black at 1% */ transparent 50% /* Transparent at 50% */
+  );
+  will-change: mask; /* Allow the mask to change */
+  transition: 400ms mask ease; /* Smooth mask transition */
+}
+
+:not(.overlay) > .card {
+  transition: 400ms background ease;
+  will-change: background;
+}
+
+:not(.overlay) > .card:hover {
+  --lightness: 95%;
+  background: hsla(var(--hsl), 0.1);
+}
+
+.overlay .card {
+  /* set card bg color to a slightly lighter hsla color */
+  background-color: hsla(var(--hsl), 0.15);
+
+  /* set card border color to a slightly lighter hsla color */
+  border-color: hsla(var(--hsl), 1);
+
+  /* add box shadow with slightly lighter hsla color */
+  box-shadow: 0 0 0 1px inset hsl(var(--hsl));
+}
+
+/* CTA Button in Overlay */
+.overlay .cta {
+  display: block;
+  grid-row: -1;
+  width: 100%;
+  background-color: hsl(var(--hsl));
+  box-shadow: 0 0 0 1px hsl(var(--hsl));
+}
+
+.h1 {
+  color: white; /* White text color */
+  background-color: #010a13; /* Dark background color */
+  padding: 20px 20px; /* Add padding around text */
+  /* Optional: Add rounded corners */
+  box-shadow: 0px 0px 20px 10px rgba(247, 6, 6, 0.7); /* Add glowing shadow */
+  border-radius: 20px; /* Curve corners */
+}
+.heading1 {
+  /* Heading 1 - aqua color, bold */
+  color: aqua;
+  font-family: "Orbitron", sans-serif;
+  font-size: x-large;
+  font-weight: 900;
+  /* Glowing aqua text shadow */
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+.para1 {
+  color: yellow;
+  font-family: "Righteous", sans-serif;
+}
+/* Define ingredients style */
+.ingredients {
+  color: white; /* White text color */
+  background-color: #010a13; /* Dark background color */
+  padding: 20px 20px; /* Internal padding */
+
+  /* Add rounded corners */
+  box-shadow: 0px 0px 20px 10px rgba(42, 247, 6, 0.7);
+  border-radius: 20px;
+}
+.heading2 {
+  /* aqua colored heading2 */
+  color: aqua;
+
+  /* "Orbitron" sans-serif font */
+  font-family: "Orbitron", sans-serif;
+
+  /* large font size */
+  font-size: x-large;
+
+  /* bold font weight */
+  font-weight: 900;
+
+  /* glowing aqua text shadow */
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+}
+.para2 {
+  color: red;
+  font-family: "Righteous", sans-serif;
+}
+/*The below code if fot whole table 
+like its th td tags*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th {
+  border: 2px solid #fdfbfb;
+  padding: 8px;
+  text-align: left;
+  color: rgb(255, 47, 175);
+  font-family: "Orbitron", sans-serif;
+}
+td {
+  border: 2px solid #fdfbfb;
+  padding: 8px;
+  text-align: left;
+  color: rgb(255, 47, 175);
+  font-family: "Righteous", sans-serif;
+}
+th {
+  background-color: #12dfee;
+  color: black;
+}
+/* Background and padding */
+.facts {
+  color: white;
+  background-color: #010a13;
+  padding: 20px 20px;
+  /* Shadow and border radius */
+  box-shadow: 0px 0px 20px 10px rgba(74, 6, 247, 0.7);
+  border-radius: 20px;
+}
+.para3 {
+  color: greenyellow;
+  font-family: "Righteous", sans-serif;
+}
+/* Add these lines at the end of your existing CSS */
+.slider-container {
+  width: 100%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.slider-image {
+  display: none;
+  width: 60%; /* Adjust as needed */
+  animation: slideAnimation 5s infinite; /* Adjust duration as needed */
+  filter: brightness(100%);
+}
+
+@keyframes slideAnimation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

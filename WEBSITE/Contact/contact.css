@@ -1,0 +1,421 @@
+/*For font*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Martel:wght@700&family=Orbitron:wght@600&family=Righteous&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*For whole body BG color is black*/
+body {
+  height: 100vh; /* viewport height */
+  background-color: #050000; /* darkish blue */
+  font-family: "Kanit", sans-serif; /* Kanit sans-serif font */
+  display: flex; /* flexible container */
+  align-items: center; /* vertically center items */
+  flex-direction: column; /* stack items vertically */
+}
+
+/* .header container */
+.header {
+  /* Top positioning */
+  top: 10px;
+  /* Position relative to parent */
+  position: relative;
+  /* Large font size */
+  font-size: 5rem;
+  /* Capital letters */
+  text-transform: uppercase;
+  /* Wide spacing between letters */
+  letter-spacing: 3px;
+  /* Change cursor on hover */
+  cursor: pointer;
+}
+
+:root {
+  --clr: #1af7ff;
+}
+
+/* Apply stroke effect to text */
+.text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  transition: 0.1s ease; /* Smooth transition for text */
+  transition-delay: 0.25s; /* Add delay before transition */
+}
+
+.hover-text {
+  /* Position text absolute */
+  position: absolute;
+  /* Cover entire area */
+  inset: 0;
+  /* Start with no width */
+  width: 0%;
+  /* Color text based on var */
+  color: var(--clr);
+  /* Hide overflow */
+  overflow: hidden;
+  /* Apply right border */
+  border-right: 6px solid var(--clr);
+  /* Animate text on hover */
+  transition: 0.5s ease-in-out;
+}
+
+.header:hover .hover-text {
+  /* Hover effect for .hover-text */
+  width: 100%;
+  filter: drop-shadow(0 0 40px var(--clr));
+}
+
+.header:hover .text {
+  /* Toggle text stroke on hover */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+}
+
+/*For responsiveness*/
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .contact {
+    margin-top: 10%;
+  }
+}
+
+/* Contact Form Styles */
+/* Define container */
+.container {
+  /* Use flexbox layout */
+  display: flex;
+  /* Distribute space around flex items */
+  justify-content: space-around;
+  /* Set container width */
+  width: 80%;
+}
+
+/* Background color and padding */
+form {
+  background-color: #fbfbfb;
+  padding: 20px;
+
+  /* Border radius, box shadow, and width */
+
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(250, 246, 246, 0.236);
+  width: 50%;
+
+  /* Margin top and display flex */
+
+  margin-top: 20px;
+  display: flex;
+
+  /* Flex direction column */
+
+  flex-direction: column;
+}
+form:hover {
+  background-color: #0f0f0f; /* Brownish grey */
+  padding: 20px; /* Adds padding around content */
+  border-radius: 8px; /* Adds rounded corners to form */
+  width: 50%; /* Adjusts form width */
+  margin-top: 20px; /* Adds space above form */
+  display: flex; /* Displays form items in a flexible grid */
+  flex-direction: column; /* Aligns items vertically */
+}
+/* define border animation */
+@keyframes borderAnimation {
+  0% {
+    /* solid magenta border */
+    border: 2px solid #ff00ff;
+    transform: translate(0, 0);
+  }
+  25% {
+    /* solid green border */
+    border: 2px solid #00ff00;
+    transform: translate(0, 0);
+  }
+  50% {
+    /* solid magenta border */
+    border: 2px solid #ff00ff;
+    transform: translate(0, 0);
+  }
+  75% {
+    /* solid green border */
+    border: 2px solid #00ff00;
+    transform: translate(0, -0);
+  }
+  100% {
+    /* solid magenta border */
+    border: 2px solid #ff00ff;
+    transform: translate(0, 0);
+  }
+}
+/*For hover effect of form*/
+form:hover {
+  animation: borderAnimation 1s infinite;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+/*For hover effects of label*/
+form:hover label {
+  background-image: linear-gradient(
+    to bottom,
+    #ff5757,
+    #fff100,
+    #15ffe1,
+    #ff0040
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11); /* Text color when hovering */
+  text-shadow: 0 0 10px yellow, 0 0 20px blue, 0 0 40px aqua,
+    0 0 60px greenyellow;
+  font-family: "Dhurjati", sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+}
+label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/*For submit button*/
+/* Customized button styling */
+button {
+  font-size: larger; /* Bigger font size */
+  font-style: italic; /* Italicized font style */
+  font-family: cursive; /* Cursive font family */
+  font-weight: bolder; /* Bold font weight */
+  background-color: rgb(7, 7, 7); /* Darker background color */
+  color: #fa0a0a; /* Vivid red font color */
+  padding: 10px 15px; /* Increased padding around text */
+  border: none; /* No border around button */
+  border-radius: 4px; /* Rounded corners for aesthetics */
+  cursor: pointer; /* Indicates button functionality */
+}
+/*For animation of submit  button when hovered*/
+button:hover {
+  background-image: linear-gradient(
+    90deg,
+    #ff0000,
+    #0000ff 50%,
+    #ffff00 75%,
+    #ff00ff 100%
+  );
+  color: black;
+  animation: slide 2s linear infinite;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua;
+  font-family: "Dhurjati", sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+}
+@keyframes slide {
+  100% {
+    background-position: 20rem;
+  }
+}
+/* Headings styling */
+h2 {
+  /* Background gradient */
+  background-image: linear-gradient(
+    to right,
+    #ff5757,
+    #fff100,
+    #15ffe1,
+    #ff0040
+  );
+  /* Clip background to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Add stroke to text */
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11); /* Text color */
+  font-weight: bolder; /* Text weight */
+  font-size: xx-large; /* Text size */
+  font-family: "Orbitron", sans-serif; /* Text font */
+}
+/*Hover effect for h2*/
+h2:hover {
+  color: black;
+  text-shadow: 0 0 10px aqua, 0 0 10px aqua;
+}
+.Number {
+  color: #ff5757;
+  font-size: larger;
+  font-family: "Righteous", sans-serif;
+}
+.tollfree {
+  color: #fff100;
+  font-size: larger;
+  font-family: "Righteous", sans-serif;
+}
+.website {
+  color: #15ffe1;
+  font-size: larger;
+  font-family: "Righteous", sans-serif;
+}
+.web {
+  color: #ff0040;
+  font-size: larger;
+  font-family: "Righteous", sans-serif;
+}
+.address {
+  color: #ff5757;
+  font-size: larger;
+  font-family: "Righteous", sans-serif;
+}
+.add {
+  color: #fff100;
+  font-size: larger;
+  font-family: "Righteous", sans-serif;
+}
+
+.contact {
+  margin-top: 15%;
+}
+.Number:hover {
+  color: #ff5757;
+  font-size: larger;
+  text-shadow: 0 0 10px #ff5757, 0 0 10px #ff5757;
+}
+.tollfree:hover {
+  color: #fff100;
+  font-size: larger;
+  text-shadow: 0 0 10px #fff100, 0 0 10px #fff100;
+}
+.website:hover {
+  color: #15ffe1;
+  font-size: larger;
+  text-shadow: 0 0 10px #15ffe1, 0 0 10px #15ffe1;
+}
+.web:hover {
+  color: #ff0040;
+  font-size: larger;
+  text-shadow: 0 0 10px #ff0040, 0 0 10px #ff0040;
+}
+.address:hover {
+  color: #ff5757;
+  font-size: larger;
+  text-shadow: 0 0 10px #ff5757, 0 0 10px #ff5757;
+}
+.add:hover {
+  color: #fff100;
+  font-size: larger;
+  text-shadow: 0 0 10px #fff100;
+}
+
+.contact {
+  margin-top: 15%;
+}
+
+/*The above code is for the piece of info of the company
+and their hover effects*/
+/* Define footer styling */
+footer {
+  /* Set background color to dark gray */
+  background-color: #1e1e1e;
+  /* Set text color to white */
+  color: #fff;
+  /* Add padding around footer text */
+  padding: 20px;
+  /* Center align footer text */
+  text-align: center;
+  /* Set footer width to 100% */
+  width: 100%;
+  /* Position footer at bottom of page */
+  bottom: 0;
+}
+
+/*The below code is same as about page with little bit difference with social icons inside the footer*/
+
+.footer-content {
+  font-size: 14px;
+}
+
+.footer-content {
+  font-size: 14px;
+}
+
+/* Add some spacing to separate the footer from the content */
+.container {
+  margin-bottom: 60px;
+}
+.copyright {
+  font-family: "Orbitron", sans-serif;
+}
+.copyright:hover {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(0, 255, 17);
+  text-shadow: 0 0 10px rgb(0, 255, 17), 0 0 20px rgb(0, 255, 17),
+    0 0 10px rgb(0, 255, 17);
+}
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  background-color: #1af7ff;
+  color: #050000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icons img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  margin: 5px; /* Adjust the margin as needed for spacing between icons */
+  background-color: white;
+  border-radius: 40px;
+}
+
+.facebook:hover {
+  background-color: blue;
+}
+
+.instagram:hover {
+  background-color: #ff1515;
+}
+
+.linkedin:hover {
+  background-color: #155bff;
+}
+
+.messenger:hover {
+  background-color: #1596ff;
+}
+.pinterest:hover {
+  background-color: #ff1515;
+}
+.whatsapp:hover {
+  background-color: #15ff1d;
+}

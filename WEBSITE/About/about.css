@@ -1,0 +1,398 @@
+/*For font*/
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,600&family=Josefin+Sans:ital,wght@1,500&family=Lobster&family=Nova+Square&family=Orbitron:wght@800&family=Poppins:ital,wght@1,700&family=Russo+One&display=swap");
+
+/*BG color for whole body*/
+body {
+  background-color: rgb(4, 4, 4);
+}
+
+/*Heading 1 and heading 
+specified the font family and add gradient colors for it*/
+h1,
+h2 {
+  font-family: "Orbitron", sans-serif;
+  background-image: linear-gradient(
+    to left,
+    #ff5757,
+    #fff100,
+    #15ffe1,
+    #ff0040
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  letter-spacing: 0.3rem;
+  font-weight: bolder;
+  text-shadow: 0 0 10px red, 0 0 20px aqua, 0 0 30px yellow;
+  touch-action: manipulation;
+  font-size: xx-large;
+  margin-bottom: 4%;
+}
+/*The hover effects for heading 1 and heading 2*/
+h1:hover,
+h2:hover {
+  color: yellow;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 40px aqua, 0 0 80px aqua;
+  background-image: none;
+}
+
+h2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -4%;
+  font-size: xx-large;
+  text-shadow: 0 0 10px aqua, 0 0 20px yellow;
+}
+
+/*For skittles logo picture 
+Added an animation for it which looks great*/
+.logo {
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 4%;
+  margin-top: -4%;
+  animation: borderAnimation 1s infinite;
+  border-radius: 60% / 60%;
+}
+/*Animation for logo*/
+@keyframes borderAnimation {
+  0% {
+    border: 3px solid #ff00ff;
+    transform: translate(0, 0);
+  }
+  25% {
+    border: 3px solid #00ff00;
+    transform: translate(0, 0);
+  }
+  50% {
+    border: 3px solid #ccff00;
+    transform: translate(0, 0);
+  }
+  75% {
+    border: 3px solid #00ffe1;
+    transform: translate(0, -0);
+  }
+  100% {
+    border: 3px solid #ff2600;
+    transform: translate(0, 0);
+  }
+}
+/*All the specific info are separated from each other
+Using a border animation*/
+/*div class=h3*/
+.h3 {
+  animation: border 1s infinite;
+  border-radius: 20px;
+  margin-right: 50%;
+}
+/*For heading 3 */
+h3 {
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 40px aqua, 0 0 80px aqua;
+  font-family: "Russo One", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #8c57ff, #00ff2f, #ff5715, #3300ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: xx-large;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  padding: 10px;
+}
+/*For paragraph under heading*/
+.para1 {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #8c57ff, #00ff2f, #ff5715, #3300ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+
+  text-shadow: none;
+  font-style: italic;
+  font-size: x-large;
+  font-family: "Nova Square", sans-serif;
+}
+/*Animation for them*/
+@keyframes border {
+  0% {
+    border: 5px solid #ff00ff;
+    transform: translate(0, 0);
+  }
+  25% {
+    border: 5px solid #00ff00;
+    transform: translate(0, 0);
+  }
+  50% {
+    border: 5px solid #ccff00;
+    transform: translate(0, 0);
+  }
+  75% {
+    border: 5px solid #00ffe1;
+    transform: translate(0, -0);
+  }
+  100% {
+    border: 5px solid #ff2600;
+    transform: translate(0, 0);
+  }
+}
+
+p {
+  margin: 0;
+}
+/*For an additional paragraph*/
+.additional-paragraph {
+  font-family: "Nova Square", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #8c57ff, #00ff2f, #ff5715, #3300ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: x-large;
+  font-style: italic;
+  line-height: 1.5;
+  border-radius: 20px;
+  letter-spacing: 0.1rem;
+  animation: border 1s infinite;
+  padding: 10px;
+  margin-left: 50%; /* Align to the right */
+  margin-top: 10px; /* Adjust as needed */
+}
+/*For div class=h4*/
+.h4 {
+  animation: border 1s infinite;
+  border-radius: 20px;
+  margin-right: 50%;
+  margin-top: 30px;
+}
+/*Same functionality as h3*/
+h4 {
+  font-family: "Russo One", sans-serif;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 40px aqua, 0 0 80px aqua;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6bff57, #00d9ff, #ff3c15, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: xx-large;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  padding: 10px;
+  margin-right: 50%;
+}
+.para2 {
+  letter-spacing: 0.1rem;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6bff57, #00d9ff, #ff3c15, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: none;
+  font-style: italic;
+  font-size: x-large;
+}
+.h5 {
+  animation: border 1s infinite;
+  border-radius: 20px;
+  margin-left: 50%;
+}
+h5 {
+  font-family: "Russo One", sans-serif;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 40px aqua, 0 0 80px aqua;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6bff57, #00d9ff, #ff3c15, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: xx-large;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  padding: 10px;
+}
+.para3 {
+  margin-top: -25px;
+  padding: 10px;
+  letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6bff57, #00d9ff, #ff3c15, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-family: "Exo 2", sans-serif;
+  text-shadow: none;
+  font-style: italic;
+  font-size: x-large;
+}
+.h6 {
+  animation: border 1s infinite;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+h6 {
+  font-family: "Russo One", sans-serif;
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 40px aqua, 0 0 80px aqua;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6bff57, #00d9ff, #ff3c15, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  font-size: xx-large;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  padding: 10px;
+}
+.para4 {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to top, #6bff57, #00d9ff, #ff3c15, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.1em transparent;
+  color: rgb(11, 11, 11);
+  letter-spacing: 0.1rem;
+  padding: 10px;
+  font-family: "Exo 2", sans-serif;
+  text-shadow: none;
+  font-style: italic;
+  font-size: x-large;
+}
+/*From h3 to h6 and para 1 to para3 all the info is separated and displayed in an interesting manner
+*/
+
+/*For responsiveness
+Determine the values for smaller screens so that content should be displayed
+h2-h6, logo, para3*/
+@media (max-width: 768px) {
+  h2 {
+    justify-content: center;
+  }
+  .logo {
+    order: -1;
+  }
+  .h3 {
+    margin-right: 0;
+  }
+  .additional-paragraph {
+    margin-left: 0;
+  }
+  .h4 {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+  .h5 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .h6 {
+    margin-top: 10px;
+  }
+  .para3 {
+    margin-top: 0;
+  }
+}
+/*For footer*/
+.copyright {
+  font-family: "Orbitron", sans-serif;
+}
+/*For hover effect of footer*/
+.copyright:hover {
+  font-family: "Orbitron", sans-serif;
+  color: rgb(0, 255, 17);
+  text-shadow: 0 0 10px rgb(0, 255, 17), 0 0 20px rgb(0, 255, 17),
+    0 0 10px rgb(0, 255, 17);
+}
+footer {
+  margin-top: 10px;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer-content {
+  font-size: 14px;
+}
+
+.footer-content {
+  font-size: 14px;
+}
+/*For back to top  button*/
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  background-color: #1af7ff;
+  color: #050000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+#back-to-top:hover {
+  color: #00ff00;
+  background-color: #050000;
+  animation: border 1s infinite;
+}
+
+/*For footer*/
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*For icons in the footer*/
+.icons img {
+  width: 80px; /* Adjust the width as needed */
+  height: 80px; /* Adjust the height as needed */
+  margin: 5px; /* Adjust the margin as needed for spacing between icons */
+  background-color: white;
+  border-radius: 40px;
+}
+
+/*For BG color of icons in the footer*/
+.facebook:hover {
+  background-color: blue;
+}
+
+.instagram:hover {
+  background-color: #ff1515;
+}
+
+.linkedin:hover {
+  background-color: #155bff;
+}
+
+.messenger:hover {
+  background-color: #1596ff;
+}
+.pinterest:hover {
+  background-color: #ff1515;
+}
+.whatsapp:hover {
+  background-color: #15ff1d;
+}

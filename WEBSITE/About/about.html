@@ -1,0 +1,220 @@
+<!-- About Page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- Css file -->
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <!-- Company's logo -->
+    <h1>MARS INCORPORATED</h1>
+    <div class="logo-container">
+      <img
+        class="logo"
+        src="/WEBSITE/media/skittleslogo.png"
+        alt=""
+        width="300"
+      />
+    </div>
+    <!-- Product's logo -->
+    <h2>SKITTLES</h2>
+
+    <div class="h3">
+      <h3>FACTS</h3>
+      <p class="para1">
+        <!-- Some facts about it -->
+        208 million years ago, from the ocean below, a colorful force with the
+        strength of a thousand rainbows pierced the surface, cracked Pangea’s
+        supercontinent, and altered the atmospheric levels of fruity juiciness
+        on planet Earth forever
+      </p>
+    </div>
+
+    <div class="additional-paragraph">
+      From this geyser sprayed forth an endless rain of SKITTLES in Lemon,
+      Strawberry, Grape, Orange, and one flavor too notorious to name. SKITTLES
+      covered the land far and wide, high and low, as far as the eye could see.
+      Every dinosaur was full and happy, and spent their days creating art and
+      writing terrible love songs
+    </div>
+    <!-- How the company starts -->
+    <div class="h4">
+      <h4>BEGINNING</h4>
+      <p class="para2">
+        Skittles were first made commercially in 1974 by a British company. An
+        animated television advertisement from that year bears the logo of the
+        "Galaxy" company and is copyrighted by Jack Candies Ltd, a Mars
+        distribution subsidiary.They were first introduced in North America in
+        1979 as an import confectionery.In 1982, domestic production of Skittles
+        began in the United States.The name of the candy, Skittles, comes from
+        the sports game of the same name, named as such for the resemblance of
+        the sweet to items used in the game.Skittles' "taste the rainbow" theme
+        was created by the New York ad agency D'Arcy Masius Benton & Bowles.On
+        March 2, 2009, Skittles launched a web-based marketing campaign where
+        the official website became a small overlay with options to view
+        different social media sites in the main area, including its official
+        YouTube channel, a Facebook profile, and a Twitter account. The move was
+        debated by people interested in social media. In 2009, the production of
+        Skittles ceased using animal-derived gelatin, making them suitable for
+        vegetarians, vegans, and certain religious groups.
+      </p>
+    </div>
+    <!-- Flavours of skittle -->
+    <div class="h5">
+      <h5>Varieties</h5>
+      <p class="para3">
+        Skittles are produced in a wide variety of flavors and colors, including
+        sour varieties. Skittles has hinted at new flavor releases on its
+        Facebook page, using such statuses as "Locking myself in the Rainbow
+        kitchen until I see some results!" A 2011 posting contained confirmation
+        of a new flavor: "Putting the last touches on a new Skittles flavor. .
+        The lime flavor became part of the Darkside packets, which were
+        discontinued in 2015 and followed up by the Orchards packets, which were
+        discontinued in 2017. Lime was also part of the "Long Lost Lime" packets
+        that came out in summer 2017 and 2018. The Darkside flavor was revived
+        in 2019. In 2021, the "All Lime" packets containing only the lime flavor
+        were released for a limited time. In September 2021, Skittles announced
+        that the green apple-flavored Skittles would be replaced with the
+        original lime flavor. In 2022, Skittles Gummies were released. Original
+        Skittles, Tropical Skittles, released in 1989,Wild Berry Skittles, in
+        1989,Sour Skittles.
+      </p>
+    </div>
+    <!-- About brand -->
+    <div class="h6">
+      <h6>ABOUT</h6>
+      <p class="para4">
+        CEO: <br />Poul Weihrauch <br /><br />OWNER: <br />The Mars Family
+        <br />
+        <br />CONTACT: <br />(905)8575780 <br /><br />
+        Please fill the contact form in the contact section to e-mail.
+      </p>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p class="copyright">
+          &copy; 1990 Skittles for You. All rights reserved.
+        </p>
+        <ul class="icons">
+          <li class="fb">
+            <a href="#">
+              <img
+                src="/WEBSITE/socialicons/facebook.png"
+                class="facebook"
+                alt=""
+            /></a>
+          </li>
+
+          <li class="ig">
+            <a href="#">
+              <img
+                src="/WEBSITE/socialicons/instagram.png"
+                class="instagram"
+                alt=""
+            /></a>
+          </li>
+
+          <li class="link">
+            <a href="#">
+              <img
+                src="/WEBSITE/socialicons/linkedin.png"
+                class="linkedin"
+                alt=""
+            /></a>
+          </li>
+
+          <li class="wsp">
+            <a href="#">
+              <img
+                src="/WEBSITE/socialicons/whatsapp.png"
+                class="whatsapp"
+                alt=""
+            /></a>
+          </li>
+
+          <li class="msg">
+            <a href="#">
+              <img
+                src="/WEBSITE/socialicons/messenger.png"
+                class="messenger"
+                alt=""
+            /></a>
+          </li>
+
+          <li class="pin">
+            <a href="#">
+              <img
+                src="/WEBSITE/socialicons/pinterest.png"
+                class="pinterest"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <button id="back-to-top" title="Go to top">↑</button>
+    </footer>
+    <!-- Cool feature using JS which changes the BG color -->
+    <script>
+      // Get the Skittles logo element
+      var skittlesLogo = document.querySelector(".logo");
+
+      // Add a click event listener to the Skittles logo
+      skittlesLogo.addEventListener("click", function () {
+        // Change the background color of the page
+        document.body.style.backgroundColor = getRandomColor();
+      });
+
+      // Function to generate a random color
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+
+    <script>
+      // JavaScript for smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // JavaScript for back-to-top button
+      const backToTopButton = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
+
+      backToTopButton.addEventListener("click", () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    </script>
+  </body>
+</html>

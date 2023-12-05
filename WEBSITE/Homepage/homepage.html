@@ -1,0 +1,160 @@
+<!-- Homepage of a website. -->
+<!-- In this page We tried to include different type of media animations and ideas so that it will look interesting to the user. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the homepage -->
+    <title>SKITTLES</title>
+    <!-- Favicon so that it looks professional -->
+    <link rel="icon" href="favicon.ico.jpg" type="image/x-icon" />
+
+    <!-- Css file for styling -->
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+
+  <body>
+    <!-- In the header the menus are added as well as the heart shape emoji and skittles for you -->
+    <script>
+      // Function to create the global header
+      function createHeader() {
+        const header = document.createElement("header");
+        header.innerHTML = `
+                <a href="#" class="text">SKITTLES FOR YOU</a>
+                <a href="/WEBSITE/Contact/contact.html" class="menu" target="_blank">CONTACT</a>
+                <a href="/WEBSITE/About/about.html" class="menu" target="_blank">ABOUT</a>
+                <a href="/WEBSITE/Product/product.html" class="menu" target="_blank">PRODUCT</a>
+                <a href="#" class="menu">HOME</a>
+                <a href="#" class="heart">&#10084;</a>
+            `;
+        document.body.prepend(header);
+      }
+
+      // Function to create the global footer
+      function createFooter() {
+        const footer = document.createElement("footer");
+        footer.innerHTML = `
+                <p>&copy; 1990 SKITTLES. All rights reserved.</p>
+                <ul class="icons">
+      <li class="fb">
+        <a href="#">
+          <img 
+            src="/WEBSITE/socialicons/facebook.png"
+            class="facebook"
+            alt=""
+        /></a>
+      </li>
+
+      <li class="ig">
+        <a href="#">
+          <img 
+            src="/WEBSITE/socialicons/instagram.png"
+            class="instagram"
+            alt=""
+        /></a>
+      </li>
+
+      <li class="link">
+        <a href="#">
+          <img 
+            src="/WEBSITE/socialicons/linkedin.png"
+            class="linkedin"
+            alt=""
+        /></a>
+      </li>
+
+       <li class="wsp">
+        <a href="#">
+          <img 
+            src="/WEBSITE/socialicons/whatsapp.png"
+            class="whatsapp"
+            alt=""
+        /></a>
+      </li>
+
+      <li class="msg">
+        <a href="#">
+          <img 
+            src="/WEBSITE/socialicons/messenger.png"
+            class="messenger"
+            alt=""
+        /></a>
+      </li>
+
+      <li class="pin">
+        <a href="#">
+          <img 
+            src="/WEBSITE/socialicons/pinterest.png"
+            class="pinterest"
+            alt=""
+        /></a>
+      </li>
+    </ul>
+            `;
+        document.body.appendChild(footer);
+      }
+
+      // Call the functions to create header and footer
+      createHeader();
+    </script>
+
+    <!-- Use a container for the image and paragraph content -->
+    <div class="content-container">
+      <img src="/WEBSITE/media/maiimage.jpeg" alt="" class="main-image" />
+      <!-- Some information of product and company -->
+      <p class="sum">
+        208 million years ago, from the ocean below, a colorful force with the
+        strength of a thousand rainbows pierced the surface, cracked Pangea’s
+        supercontinent, and altered the atmospheric levels of fruity juiciness
+        on planet Earth forever. <br />
+        <br />
+        Delicious tragedy struck 142 million years later, when the Great Rainbow
+        of BOOM buried the planet and all of its emo dinos in a layer of
+        colorful candy a mile deep. It would take another hundred million years
+        before resourceful squirrels all over the world started bagging them and
+        storing them in every convenience store they could find. They’re still
+        doing it to this day. And that’s why you’ll never see a squirrel get
+        charged for SKITTLES — ever.
+        <br />
+        <br />
+
+        From this geyser sprayed forth an endless rain of SKITTLES in Lemon,
+        Strawberry, Grape, Orange, and one flavor too notorious to name.
+        SKITTLES covered the land far and wide, high and low, as far as the eye
+        could see. Every dinosaur was full and happy, and spent their days
+        creating art and writing terrible love songs
+      </p>
+      <!-- Used to add a video which is an advertisement of skittles -->
+      <!-- The video is responsive by specifying the values of width and height -->
+      <!-- It also allows the user to control the video -->
+      <iframe
+        width="1000"
+        height="500"
+        src="/WEBSITE/media/skittlesvideo.mp4"
+        allowfullscreen
+      ></iframe>
+
+      <!-- Add additional content next to the paragraph -->
+    </div>
+
+    <!-- A cool animation when you click on picture just click it and see -->
+    <script>
+      // Get the main image element
+      var mainImage = document.querySelector(".main-image");
+
+      // Add a click event listener to toggle brightness
+      mainImage.addEventListener("click", function () {
+        // Toggle brightness between 60% and 100%
+        var currentBrightness = mainImage.style.filter.replace(/\D/g, ""); // Extract numeric value
+        var newBrightness =
+          currentBrightness === "" || currentBrightness < 100 ? "100%" : "60%";
+
+        // Apply the new brightness
+        mainImage.style.filter = "brightness(" + newBrightness + ")";
+      });
+      createFooter();
+    </script>
+  </body>
+</html>
